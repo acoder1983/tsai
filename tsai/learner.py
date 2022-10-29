@@ -203,7 +203,7 @@ all_archs_names = ['FCN', 'FCNPlus', 'InceptionTime', 'InceptionTimePlus', 'InCo
                    'xresnet1d18_deeper', 'xresnet1d34_deeper', 'xresnet1d50_deeper', 'XResNet1dPlus', 'xresnet1d18plus', 'xresnet1d34plus', 
                    'xresnet1d50plus', 'xresnet1d101plus', 'xresnet1d152plus', 'xresnet1d18_deepplus', 'xresnet1d34_deepplus', 'xresnet1d50_deepplus', 
                    'xresnet1d18_deeperplus', 'xresnet1d34_deeperplus', 'xresnet1d50_deeperplus', 'XceptionTime', 'XceptionTimePlus', 'mWDN',
-                   'TSSequencer', 'TSSequencerPlus']
+                   'TSSequencer', 'TSSequencerPlus','Informer']
 
 
 def get_arch(arch_name):
@@ -486,6 +486,9 @@ def get_arch(arch_name):
     elif arch_name == "mWDN":  
         from tsai.models.mWDN import mWDN
         arch = mWDN
+    elif arch_name == "Informer":
+        from tsai.models.Informer import Informer
+        arch = Informer
     else: print(f"please, confirm the name of the architecture ({arch_name})")
     assert arch.__name__ == arch_name
     return arch

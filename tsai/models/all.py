@@ -42,3 +42,4 @@ from .TSiTPlus import *
 from .TSSequencerPlus import *
 from .MultiInputNet import *
 from .misc import *
+from .Informer import *
